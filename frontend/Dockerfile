@@ -1,19 +1,19 @@
+# frontend/Dockerfile
 FROM node:20
 
 WORKDIR /app
 
-# Crear proyecto React si no existe
-RUN if [ ! -f package.json ]; then \
-      npx create-react-app .; \
-    fi
+# Copiar solo package.json y package-lock.json para instalar dependencias primero
+COPY package*.json ./
 
-# Instalar dependencias
-RUN npm install
+# Instalar dependencias dentro del contenedor
+RUN npm install --legacy-peer-deps
 
-# Construir app
-RUN npm run build
+# Copiar el resto del código
+COPY . .
 
-# Servir la app
-RUN npm install -g serve
-EXPOSE 3000
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Exponer el puerto de Vite
+EXPOSE 5173
+
+# Comando para levantar Vite en modo dev y aceptar conexiones externas
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

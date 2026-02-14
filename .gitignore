@@ -1,0 +1,47 @@
+# ---------------------
+# Laravel
+# ---------------------
+/vendor
+/node_modules
+/.env
+/.idea
+/.vscode
+/.phpunit.result.cache
+/storage/*.key
+/storage/debugbar
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/views
+/storage/logs
+/public/storage
+
+# Composer files
+composer.lock
+
+# ---------------------
+# React (Vite)
+# ---------------------
+/frontend/node_modules
+/frontend/dist
+/frontend/.env.local
+/frontend/.env.*.local
+/frontend/vite-env.d.ts
+
+# ---------------------
+# Docker
+# ---------------------
+/docker-compose.override.yml
+/docker-compose.override.*.yml
+/docker/.env
+
+# ---------------------
+# Sistema operativo
+# ---------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------
+# IDE
+# ---------------------
+*.sublime-project
+*.sublime-workspace
