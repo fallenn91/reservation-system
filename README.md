@@ -2,11 +2,20 @@
 
 ## Structure
 
-|-Reservation System
-|
-|-backend (Laravel API)
-|-frontend (React SPA)
-|-docker-compose.yml
+Reservation-System/
+├── backend/         # Laravel API
+│   ├── app/
+│   ├── database/
+│   ├── routes/
+│   └── Dockerfile
+├── frontend/        # React SPA
+│   ├── src/
+│   │   ├── components/
+│   │   ├── services/
+│   │   └── App.jsx
+│   └── Dockerfile
+└── docker-compose.yml
+
 
 ## Configure environment
 

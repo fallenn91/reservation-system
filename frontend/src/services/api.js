@@ -7,4 +7,5 @@ const api = axios.create({
     },
 });
 
-export default api;
+export const getReservations = () => api.get('/reservations');
+export const createReservation = (data) => api.post('/reservations, data');

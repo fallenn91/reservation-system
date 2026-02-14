@@ -26,6 +26,7 @@ composer.lock
 /frontend/.env.local
 /frontend/.env.*.local
 /frontend/vite-env.d.ts
+/dist
 
 # ---------------------
 # Docker
