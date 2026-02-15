@@ -16,12 +16,24 @@ Reservation-System/
 │   └── Dockerfile
 └── docker-compose.yml
 
+## Build and run Dockers
 
-## Configure environment
+```bash
+docker compose up -d --build
+```
+
+## Configure environment for Laravel
 
 ```bash
 php artisan key:generate
 php artisan migrate
+```
+
+## Configure React and Vite
+
+```bash
+npm install
+npm run dev
 ```
 
 ## Create models, migration and Controller
