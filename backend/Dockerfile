@@ -12,6 +12,8 @@ WORKDIR /var/www
 # Copiar código
 COPY . .
 
+RUN composer install --no-interaction --optimize-autoloader
+
 # Exponer puerto de Laravel
 EXPOSE 8000
 

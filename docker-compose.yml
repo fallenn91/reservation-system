@@ -1,14 +1,9 @@
-
-
 services:
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: laravel_backend
-    volumes:
-      - ./backend:/var/www
-      - /var/www/vendor
     ports:
       - "8085:8000"
     depends_on:
