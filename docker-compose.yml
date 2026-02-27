@@ -4,6 +4,9 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: laravel_backend
+    volumes:
+      - ./backend:/var/www      # Sincroniza tu código con el contenedor
+      - /var/www/vendor 
     ports:
       - "8085:8000"
     depends_on:
