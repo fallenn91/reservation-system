@@ -1,3 +1,50 @@
 @import "tailwindcss";
 
+@theme {
+    --color-*: initial;
+
+    /* Primary */
+    --color-primary-400: #7E66B3; /* Morado claro/medio */
+    --color-primary-500: #6B4FA3; /* Principal botones */
+    --color-primary-600: #5A4290; /* Morado oscuro */
+    
+    /* Secondary */
+    --color-secondary-100: #F9DEEE; /* Rosa claro */
+    --color-secondary-200: #F4DEDE; /* Elementos secundarios */
+
+    /* Neutral */
+    --color-neutral-100: #F5F3F2; /* Gris claro*/
+    --color-neutral-900: #1F1F1F; /* Negro suave */
+
+    /* Accent */ 
+    --color-accent-500: #E6B422; /* Amarillo mostaza cálido */
+}
+
+body {
+    background-color: var(--color-secondary-100);
+}
+
+button {
+    color: var(--color-primary-600);
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+button::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #5A4290;
+    transition: width 0.3s;
+}
+
+button:hover::after {
+    width: 100%;
+}
+
+
+
 

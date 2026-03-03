@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from './components/Header';
 import App from "./App";
 import "./index.css";
+import HeroVideo from "./components/HeroVideo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
