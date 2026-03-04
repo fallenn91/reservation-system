@@ -4,46 +4,60 @@
     --color-*: initial;
 
     /* Primary */
-    --color-primary-400: #F1E9E9; /* Background */
-    --color-primary-500: #6B4FA3; /* Principal botones */
-    --color-primary-600: #5A4290; /* Morado oscuro */
+    --color-primary: #F1E9E9; /* Background */
+    --color-secundary: #982598; /* Titulos */
+    --color-text: #E491C9; /* Hover suave */
+    --color-icon: #15173D; /* Negro icons */
     
-    /* Secondary */
-    --color-secondary-100: #F9DEEE; /* Rosa claro */
-    --color-secondary-200: #F4DEDE; /* Elementos secundarios */
+}
 
-    /* Neutral */
-    --color-neutral-100: #F5F3F2; /* Gris claro*/
-    --color-neutral-900: #1F1F1F; /* Negro suave */
-
-    /* Accent */ 
-    --color-accent-500: #E6B422; /* Amarillo mostaza cálido */
+:root {
+    --color-primary: #F1E9E9;
+    --color-secundary: #982598;
+    --color-text: #E491C9;
+    --color-icon: #15173D;
 }
 
 body {
-    background-color: var(--color-secondary-100);
+    background-color: var(--color-primary);
 }
 
-button {
-    color: var(--color-primary-600);
+/* NAVBAR */
+
+.nav-btn {
+    color: var(--color-secundary);
+    font-size: 22px;
     padding: 10px;
     cursor: pointer;
     text-decoration: none;
     position: relative;
 }
 
-button::after {
+.nav-btn::after {
     content: "";
     display: block;
     height: 2px;
     width: 0;
-    background-color: #5A4290;
     transition: width 0.3s;
 }
 
-button:hover::after {
+.nav-btn:hover::after {
     width: 100%;
+    background-color: var(--color-secundary);
 }
+
+.nav-plan {
+    font-size: 22px;
+}
+
+.nav-plan:hover {
+    background-color: var(--color-text);
+    transition: 0.3s ease;
+}
+
+/* MAIN */
+
+
 
 
 

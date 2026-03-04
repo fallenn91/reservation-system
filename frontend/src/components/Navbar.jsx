@@ -3,12 +3,14 @@ import react from 'react';
 const Navbar = () => {
     return (
         <nav className='flex justify-between items-center'>
-            <button href="#" className='font-semibold text-lg'>TDF</button>
+            <a href="#" className='font-semibold text-lg nav-btn'>LOGO</a>
+            <a href="#" className='font-semibold text-lg nav-btn'>TDF</a>
 
-            <div className='flex space-x-6 gap-10 font-semibold text-lg'>
-            <button href="#">SOBRE MÍ</button>
-            <button href="#">MI CUENTA</button>
-            <button href="#">CONTACTO</button>
+            <div className='flex gap-10 font-semibold'>
+                <a className="nav-btn" href="#">SOBRE MÍ</a>
+                <a className="nav-btn" href="#">MI CUENTA</a>
+                <a className="nav-btn" href="#">CONTACTO</a>
+                <a className='bg-[var(--color-secundary)] text-[var(--color-primary)] px-4 py-3 rounded-lg nav-plan' href="#">PLANES</a>
             </div>
         </nav>
     );
