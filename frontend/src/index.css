@@ -1,61 +1,79 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-    --color-*: initial;
-
-    /* Primary */
-    --color-primary: #F1E9E9; /* Background */
-    --color-secundary: #982598; /* Titulos */
-    --color-text: #E491C9; /* Hover suave */
-    --color-icon: #15173D; /* Negro icons */
-    
-}
 
 :root {
-    --color-primary: #F1E9E9;
-    --color-secundary: #982598;
-    --color-text: #E491C9;
-    --color-icon: #15173D;
+  --beige: #F1E9E9;
+  --lila: #982598;
+  --rosa: #E491C9;
+  --negro: #15173D;
 }
 
 body {
-    background-color: var(--color-primary);
+  background-color: #F1E9E9;
 }
-
 /* NAVBAR */
 
-.nav-btn {
-    color: var(--color-secundary);
-    font-size: 22px;
-    padding: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
+.nav-btn {
+  position: relative;
+  color: var(--lila);
+  font-size: 22px;
+  padding: 5px;
+}
 .nav-btn::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    transition: width 0.3s;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--lila);
+  transition: width 0.3s;
 }
 
 .nav-btn:hover::after {
-    width: 100%;
-    background-color: var(--color-secundary);
+  width: 100%;
 }
 
 .nav-plan {
-    font-size: 22px;
+  font-size: 22px;
 }
 
-.nav-plan:hover {
-    background-color: var(--color-text);
-    transition: 0.3s ease;
+.img-overlay {
+  opacity: 0.4;
 }
 
-/* MAIN */
+header {
+  width: 100%;
+  height: 90vh;
+}
+
+/* CARDS */
+
+.card {
+  width: 400px;
+  height: 350px;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.card:hover {
+  transform: rotateZ(3deg);
+}
+
+section {
+  width: 90%;
+  border-radius: 8px;
+}
+
 
 
 
