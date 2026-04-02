@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MyButton from './MyButton';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
                     <a className="nav-btn text-base w-full lg:w-auto text-center hover:text-[var(--lila)] transition-colors" href="#sobre" onClick={() => setIsOpen(false)}>SOBRE MÍ</a>
                     <a className="nav-btn text-base w-full lg:w-auto text-center hover:text-[var(--lila)] transition-colors" href="#contact" onClick={() => setIsOpen(false)}>CONTACTO</a>
                     <a href='#planes' className='w-full lg:w-auto flex justify-center mt-2 lg:mt-0' onClick={() => setIsOpen(false)}>
-                        <button className="nav-plan inline-flex items-center justify-center bg-[var(--lila)] text-[var(--beige)] px-6 lg:px-4 py-2 rounded-lg transition duration-300 hover:text-[var(--lila)] hover:bg-[var(--beige)] cursor-pointer text-base w-[90%] lg:w-auto">PLANES</button>
+                        <MyButton title="PLANES"></MyButton>
                     </a>
                 </div>
             </div>

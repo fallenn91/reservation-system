@@ -1,21 +1,5 @@
 # reservation-system
 
-## Structure
-
-Reservation-System/
-├── backend/         # Laravel API
-│   ├── app/
-│   ├── database/
-│   ├── routes/
-│   └── Dockerfile
-├── frontend/        # React SPA
-│   ├── src/
-│   │   ├── components/
-│   │   ├── services/
-│   │   └── App.jsx
-│   └── Dockerfile
-└── docker-compose.yml
-
 ## Build and run Dockers
 
 ```bash

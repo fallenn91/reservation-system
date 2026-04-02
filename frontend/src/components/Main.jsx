@@ -70,7 +70,7 @@ export default function Main() {
                     </div>
                 </section>
             </article>
-            <h2 id="sobre" className="text-4xl md:text-5xl text-center font-bold text-[var(--lila)] mt-10 p-3">SOBRE MÍ</h2>
+            <h2 id="sobre" className="text-4xl md:text-5xl text-center font-bold text-[var(--lila)] mt-10 mb-10 p-3">SOBRE MÍ</h2>
             <div className="w-full min-h-[50vh] md:min-h-[70vh] flex flex-col-reverse lg:flex-row justify-center items-center py-10 md:py-20 bg-[url('/assets/foto4.jpg')] bg-cover bg-center gap-8 lg:gap-10 px-4">
                 
                 {/* Contenedor del texto */}
