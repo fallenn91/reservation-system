@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header className="flex justify-center items-center p-4 mb-5 max-w-7xl mx-auto h-[60vh] md:h-[80vh]">
+        <header id="home" className="flex justify-center items-center p-4 mb-5 max-w-7xl mx-auto h-[60vh] md:h-[80vh]">
             <div className="w-full h-full mb-4 relative rounded-lg overflow-hidden">
                 <img
                     src="/assets/food.jpg"
