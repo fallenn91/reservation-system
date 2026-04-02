@@ -83,7 +83,7 @@ export default function Main() {
 
                 {/* Contenedor del logo */}
                 <div className="w-[180px] md:w-[220px] lg:w-[250px] flex-shrink-0 bg-white/50 p-2 rounded-xl">
-                    <img src="/assets/logo2.jpeg" alt="logo TDF" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                    <img src="/assets/logo-completo.png" alt="logo TDF" className="w-full h-auto object-cover rounded-lg shadow-md" />
                 </div>
             </div>
         </div>      
