@@ -26,8 +26,8 @@ export default function Main() {
                     description="El cambio real empieza en la mente. Trabajamos la constancia, la perseverancia y la disciplina para que mantengas el compromiso, incluso cuando la motivación disminuye, ayudándote a desarrollar hábitos que perduren en el tiempo."
                 />
             </article>
-            <article className="w-full h-full flex flex-col justify-center items-center gap-2 mt-10">
-                <h1 id="planes" className="text-4xl md:text-5xl font-bold text-[var(--lila)] m-5 text-center">PLANES</h1>
+            <article className="w-full h-full flex flex-col justify-center items-center gap-5 mt-10">
+                <h1 id="planes" className="text-4xl md:text-5xl font-bold text-[var(--lila)] p-12 text-center">PLANES</h1>
                 <section className='w-full bg-gray-100 p-5 md:p-8 border border-gray-300 shadow-lg flex flex-col lg:flex-row justify-center items-center gap-8 mx-auto rounded-xl'>
                     <div className='w-full lg:w-[400px] h-full flex flex-col justify-center'>
                         <h2 className='text-2xl md:text-3xl text-[var(--lila)] font-semibold mb-3 md:mb-5 text-center lg:text-left'>PLAN ESSENTIAL</h2>
@@ -58,7 +58,7 @@ export default function Main() {
                     </div>
                 </section>
             </article>
-            <article className="w-full h-full flex flex-col justify-center items-center gap-2 mt-10">
+            <article className="w-full h-full flex flex-col justify-center items-center gap-2 mt-10 mb-9">
                 <section className='w-full bg-gray-100 p-5 md:p-8 border border-gray-300 shadow-lg flex flex-col lg:flex-row justify-center items-center gap-8 mx-auto rounded-xl'>
                     <div className='w-full lg:w-[400px] h-full flex flex-col justify-center'>
                         <h2 className='text-2xl md:text-3xl text-[var(--lila)] font-semibold mb-3 md:mb-5 text-center lg:text-left'>PLAN CHOQUE</h2>
@@ -73,7 +73,7 @@ export default function Main() {
                     </div>
                 </section>
             </article>
-            <h2 id="sobre" className="text-4xl md:text-5xl text-center font-bold text-[var(--lila)] mt-10 mb-10 p-3">SOBRE MÍ</h2>
+            <h2 id="sobre" className="text-4xl md:text-5xl text-center font-bold text-[var(--lila)] p-12">SOBRE MÍ</h2>
             <div className="relative w-full min-h-[50vh] md:min-h-[70vh] flex flex-col-reverse lg:flex-row justify-center items-center py-10 rounded-lg overflow-hidden md:py-20 bg-[url('/assets/foto4.jpg')] bg-cover bg-center bg-fixed gap-8 lg:gap-10 px-4">
             <div className="absolute inset-0 bg-black/40"></div>
                 {/* Contenedor del texto */}
