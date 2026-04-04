@@ -36,7 +36,7 @@ export default function Main() {
             <article id="planes" className="w-full flex flex-col gap-5 mt-10">
                 <h1 className='text-4xl md:text-5xl text-center font-bold text-[var(--lila)] p-12'>PLANES</h1>
                                         {/* PLAN ESSENTIAL */}
-                <h2 className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)]'>PLAN ESSENTIAL</h2>
+                <h2 id="essential "className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)]'>PLAN ESSENTIAL</h2>
                 <div className='w-full flex flex-col lg:flex-row justify-center mt-5 gap-6'>
                     <div className='w-full lg:w-[60%] flex flex-col justify-center gap-6'>
                         <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
@@ -50,7 +50,7 @@ export default function Main() {
                             </ul>
                         </div>
                         {/* PLAN PREMIUM */}
-                        <h2 className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3'>PLAN PREMIUM</h2>
+                        <h2 id="premium" className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3'>PLAN PREMIUM</h2>
 
                         <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
                             <ul className='space-y-2'>
@@ -64,7 +64,7 @@ export default function Main() {
                         </div>
                                                 {/* PLAN CHOQUE */}
 
-                        <h2 className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3'>PLAN CHOQUE</h2>
+                        <h2 id="choque" className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3'>PLAN CHOQUE</h2>
 
                         <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
                             <ul className='space-y-2'>

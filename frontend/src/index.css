@@ -18,6 +18,10 @@ body {
 
 /* NAVBAR */
 
+nav {
+  border-radius: 0 0 8px 8px;
+}
+
 .nav-btn {
   position: relative;
   color: var(--lila);
@@ -55,6 +59,11 @@ body {
 .plan-icon {
   width: 40px;
   height: auto;
+}
+
+footer {
+  box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.2);
+  border-radius: 8px 8px 0 0;
 }
 
 
