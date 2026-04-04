@@ -1,5 +1,10 @@
 import Card from './Card';
-import { FaDumbbell, FaNutritionix, FaBrain   } from "react-icons/fa";
+import { FaDumbbell, FaNutritionix, FaBrain, FaCalendarCheck, FaHeartbeat   } from 'react-icons/fa';
+import { GiForkKnifeSpoon, GiRunningShoe } from "react-icons/gi";
+import { IoIosChatbubbles, IoMdSettings, IoMdTrendingUp  } from "react-icons/io";
+import { MdPhoneInTalk, MdOutlinePayments  } from "react-icons/md";
+import MyButton from './MyButton';
+
 export default function Main() {
     return (
         <div className="w-full flex flex-col items-center justify-center px-4 my-9 md:px-12">
@@ -26,52 +31,60 @@ export default function Main() {
                     description="El cambio real empieza en la mente. Trabajamos la constancia, la perseverancia y la disciplina para que mantengas el compromiso, incluso cuando la motivación disminuye, ayudándote a desarrollar hábitos que perduren en el tiempo."
                 />
             </article>
-            <article className="w-full h-full flex flex-col justify-center items-center gap-5 mt-10">
-                <h1 id="planes" className="text-4xl md:text-5xl font-bold text-[var(--lila)] p-12 text-center">PLANES</h1>
-                <section className='w-full bg-gray-100 p-5 md:p-8 border border-gray-300 shadow-lg flex flex-col lg:flex-row justify-center items-center gap-8 mx-auto rounded-xl'>
-                    <div className='w-full lg:w-[400px] h-full flex flex-col justify-center'>
-                        <h2 className='text-2xl md:text-3xl text-[var(--lila)] font-semibold mb-3 md:mb-5 text-center lg:text-left'>PLAN ESSENTIAL</h2>
-                        <ul className='mt-2 md:mt-5 text-lg md:text-xl lg:text-2xl list-disc list-inside space-y-2'>
-                            <li>Plan nutricional personalizado</li>
-                            <li>Rutina de Entrenamiento</li>
-                            <li>Revisión Mensual</li>
-                        </ul>
+                                                    {/* PLANES */}
+
+            <article id="planes" className="w-full flex flex-col gap-5 mt-10">
+                <h1 className='text-4xl md:text-5xl text-center font-bold text-[var(--lila)] p-12'>PLANES</h1>
+                                        {/* PLAN ESSENTIAL */}
+                <h2 className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)]'>PLAN ESSENTIAL</h2>
+                <div className='w-full flex flex-col lg:flex-row justify-center mt-5 gap-6'>
+                    <div className='w-full lg:w-[60%] flex flex-col justify-center gap-6'>
+                        <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
+                            <ul className='space-y-5'>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><GiForkKnifeSpoon className="plan-icon" />Plan nutricional personalizado</h3>
+                                <p className="text-base md:text-lg">Recibirás una dieta diseñada específicamente para ti, tomando en cuenta tus metas, preferencias alimenticias y necesidades nutricionales.</p>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><GiRunningShoe className="plan-icon" />Rutina de entrenamiento</h3>
+                                <p className="text-base md:text-lg">Una rutina personalizada adaptada a tu nivel de condición física, que te ayudará a progresar de manera gradual.</p>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><FaCalendarCheck className="plan-icon"/>Revisión mensual</h3>
+                                <p className="text-base md:text-lg">Un chequeo mensual de tu progreso para ajustar la dieta y la rutina según sea necesario, asegurando que te mantengas en el camino hacia tus objetivos.</p>
+                            </ul>
+                        </div>
+                        {/* PLAN PREMIUM */}
+                        <h2 className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3'>PLAN PREMIUM</h2>
+
+                        <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
+                            <ul className='space-y-2'>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><IoIosChatbubbles className="plan-icon"/>Chat Prioritario (Whatsapp)</h3>
+                                <p className="text-base md:text-lg">Tendrás acceso directo a través de un chat exclusivo donde podrás hacer preguntas y recibir soporte inmediato para resolver cualquier duda que tengas en tu camino de entrenamiento y nutrición.</p>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><IoMdSettings className="plan-icon"/>Ajustes Semanales</h3>
+                                <p className="text-base md:text-lg">Cada semana recibirás una actualización o ajuste en tu plan, ya sea en tu rutina de entrenamiento o en tu dieta, para optimizar tus resultados y mantener el desafío.</p>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><MdPhoneInTalk className="plan-icon"/>Llamada Mensual</h3>
+                                <p className="text-base md:text-lg">Una llamada mensual con tu entrenador para revisar tu progreso, discutir tus logros y desafíos, y ajustar tu plan según sea necesario.</p>
+                            </ul>
+                        </div>
+                                                {/* PLAN CHOQUE */}
+
+                        <h2 className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3'>PLAN CHOQUE</h2>
+
+                        <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
+                            <ul className='space-y-2'>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><MdOutlinePayments className="plan-icon"/>Pago único</h3>
+                                <p className="text-base md:text-lg">Este plan requiere un pago único, lo que te asegura acceso completo a todo el seguimiento intensivo durante 3 meses. No habrá cargos adicionales durante ese tiempo.</p>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><FaHeartbeat className="plan-icon"/>Seguimiento Intensivo</h3>
+                                <p className="text-base md:text-lg">Tendrás un acompañamiento cercano con actualizaciones diarias o semanales según tus necesidades, para asegurarte de que estés siempre en el camino correcto.</p>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><IoMdTrendingUp className="plan-icon"/>Resultados en 3 meses</h3>
+                                <p className="text-base md:text-lg">Este plan está diseñado para garantizar resultados visibles en un corto periodo, con el objetivo de lograr una transformación notable en tan solo tres meses.</p>
+                            </ul>
+                        </div>
                     </div>
-                    <div className='w-full lg:w-[500px] h-[250px] md:h-[300px] overflow-hidden rounded-lg'>
-                        <img src='./assets/foto1.jpg' alt='food breakfast' className='w-full h-full object-cover rounded-lg'></img>
+                    <div className='relative w-full lg:w-[40%] flex flex-col justify-start gap-5'>
+                        <div className="relative sticky top-[25vh] w-full h-[450px] rounded-lg overflow-hidden">
+                            <img src='/assets/foto1.jpg' className='w-full h-full object-cover' alt="Imagen" />
+                            <div className='absolute inset-0 bg-black/40'></div>
+                            <MyButton title="Comienza hoy mismo" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !text-sm md:!text-lg lg:!text-xl z-10"/>
+                        </div>
                     </div>
-                </section>
-            </article>
-            <article className="w-full h-full flex flex-col justify-center items-center gap-2 mt-10">
-                <section className='w-full bg-gray-100 p-5 md:p-8 border border-gray-300 shadow-lg flex flex-col-reverse lg:flex-row justify-center items-center gap-8 mx-auto rounded-xl'>
-                    <div className='w-full lg:w-[500px] h-[250px] md:h-[300px] overflow-hidden rounded-lg'>
-                        <img src='./assets/foto2.jpg' alt='food breakfast' className='w-full h-full object-cover rounded-lg'></img>
-                    </div>
-                    <div className='w-full lg:w-[400px] h-full flex flex-col justify-center'>
-                        <h2 className='text-2xl md:text-3xl text-[var(--lila)] font-semibold mb-3 md:mb-5 text-center lg:text-left'>PLAN PREMIUM</h2>
-                        <ul className='mt-2 md:mt-5 text-lg md:text-xl lg:text-2xl list-disc list-inside space-y-2'>
-                            <li>Plan Essential</li>
-                            <li>Chat Prioritario (Whatsapp)</li>
-                            <li>Ajustes Semanales</li>
-                            <li>Llamada Mensual</li>
-                        </ul>
-                    </div>
-                </section>
-            </article>
-            <article className="w-full h-full flex flex-col justify-center items-center gap-2 mt-10 mb-9">
-                <section className='w-full bg-gray-100 p-5 md:p-8 border border-gray-300 shadow-lg flex flex-col lg:flex-row justify-center items-center gap-8 mx-auto rounded-xl'>
-                    <div className='w-full lg:w-[400px] h-full flex flex-col justify-center'>
-                        <h2 className='text-2xl md:text-3xl text-[var(--lila)] font-semibold mb-3 md:mb-5 text-center lg:text-left'>PLAN CHOQUE</h2>
-                        <ul className='mt-2 md:mt-5 text-lg md:text-xl lg:text-2xl list-disc list-inside space-y-2'>
-                            <li>Pago único</li>
-                            <li>Seguimiento Intensivo</li>
-                            <li>Resultados en 3 meses</li>
-                        </ul>
-                    </div>
-                    <div className='w-full lg:w-[500px] h-[250px] md:h-[300px] overflow-hidden rounded-lg'>
-                        <img src='./assets/foto3.jpg' alt='food breakfast' className='w-full h-full object-cover rounded-lg'></img>
-                    </div>
-                </section>
+                </div>
             </article>
             <h2 id="sobre" className="text-4xl md:text-5xl text-center font-bold text-[var(--lila)] p-12">SOBRE MÍ</h2>
             <div className="relative w-full min-h-[50vh] md:min-h-[70vh] flex flex-col-reverse lg:flex-row justify-center items-center py-10 rounded-lg overflow-hidden md:py-20 bg-[url('/assets/foto4.jpg')] bg-cover bg-center bg-fixed gap-8 lg:gap-10 px-4">
@@ -79,7 +92,7 @@ export default function Main() {
                 {/* Contenedor del texto */}
                 <div className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] p-6 md:p-8 bg-white/80 rounded-xl shadow-xl flex flex-col justify-center z-10">
                     <h3 className="text-2xl md:text-3xl font-bold text-[var(--lila)] mb-4 text-center lg:text-left">CLAUDIA DÍAZ</h3>
-                    <p className="text-base md:text-xl lg:text-2xl leading-relaxed text-gray-800 text-justify">
+                    <p className="text-base md:text-xl leading-relaxed text-gray-800 text-justify">
                         Mi camino en el mundo del bienestar no empezó en un aula, sino a los 5 años, cuando mi diagnóstico de diabetes tipo 1 me obligó a entender la nutrición y el deporte como los pilares fundamentales de mi salud. Lo que empezó como una necesidad personal, se convirtió rápidamente en mi mayor pasión. Hoy con 23 años y una formación sólida como dietista y entrenadora personal titulada, mi misión es clara: Ayudarte a alcanzar tu mejor versión sin mitos ni restricciones extremas. Sé lo que significa tener que cuidar cada detalle, por eso mi enfoque es humano, realista y basado en la ciencia.
                     </p>
                 </div>
