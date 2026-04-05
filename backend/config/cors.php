@@ -19,8 +19,8 @@ return [
     'allowed_methods' => ['*'], // Permite todos los métodos HTTP (GET, POST, PUT, DELETE, etc.)
 
     'allowed_origins' => [
-        'http://localhost:3000', // Dirección de tu frontend en React (ajusta este puerto según el que uses)
-        'https://https://system-delta-lyart.vercel.app', // Puedes agregar tu dominio de producción aquí
+        'http://localhost:3000',
+        'https://system-delta-lyart.vercel.app',
     ],
 
     'allowed_origins_patterns' => [],

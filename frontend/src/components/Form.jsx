@@ -17,7 +17,7 @@ export default function FormContact() {
         setStatusMessage('Enviando...');
 
         try {
-            const response = await axios.post('http://localhost:8085/api/contacto', {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/contacto`, {
                 name,
                 email,
                 phone,
