@@ -17,13 +17,12 @@ class ContactController extends Controller
         ]);
 
         try {
-            Resend::emails()->send([
-                'from' => 'onboarding@resend.dev',
-                'to' => 'fa11enn9119@gmail.com',
-                'subject' => 'Nuevo mensaje de contacto',
-                'text' => "Nombre: {$validated['name']}\nEmail: {$validated['email']}\nTeléfono: {$validated['phone']}\nMensaje: {$validated['msg']}",
-            ]);
-
+            Mail::raw("Nombre: {$validated['name']}\nEmail: {$validated['email']}\nTeléfono: {$validated['phone']}\nMensaje: {$validated['msg']}", function ($message) use ($validated) {
+                // Para usar Resend sin dominio verificado debemos enviar hacia el correo registrado
+                $message->to(env('MAIL_TO_ADDRESS'))
+                        ->subject('Nuevo mensaje de contacto')
+                        ->replyTo($validated['email'], $validated['name']);
+            });
             return response()->json(['message' => 'Datos enviados correctamente.'], 200);
         } catch (\Exception $e) {
             \Log::error('Error al enviar el correo: '.$e->getMessage());
