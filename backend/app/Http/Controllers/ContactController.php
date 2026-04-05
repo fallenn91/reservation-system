@@ -18,7 +18,8 @@ class ContactController extends Controller
 
         try {
             Mail::raw("Nombre: {$validated['name']}\nEmail: {$validated['email']}\nTeléfono: {$validated['phone']}\nMensaje: {$validated['msg']}", function ($message) use ($validated) {
-                $message->to(env('MAIL_FROM_ADDRESS'))
+                // Para usar Resend sin dominio verificado debemos enviar hacia el correo registrado
+                $message->to(env('MAIL_TO_ADDRESS', 'nuria.almendros03@gmail.com'))
                         ->subject('Nuevo mensaje de contacto')
                         ->replyTo($validated['email'], $validated['name']);
             });
