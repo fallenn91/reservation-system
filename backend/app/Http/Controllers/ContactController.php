@@ -19,7 +19,7 @@ class ContactController extends Controller
         try {
             Resend::emails()->send([
                 'from' => 'onboarding@resend.dev',
-                'to' => 'nuria.almendros03@gmail.com',
+                'to' => 'fa11enn9119@gmail.com',
                 'subject' => 'Nuevo mensaje de contacto',
                 'text' => "Nombre: {$validated['name']}\nEmail: {$validated['email']}\nTeléfono: {$validated['phone']}\nMensaje: {$validated['msg']}",
             ]);
