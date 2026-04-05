@@ -8,8 +8,13 @@ export default function FormContact() {
     const [phone, setPhone] = useState('');
     const [msg, setMsg] = useState('');
 
+    const [status, setStatus] = useState(''); // 'success', 'error', 'loading'
+    const [statusMessage, setStatusMessage] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setStatus('loading');
+        setStatusMessage('Enviando...');
 
         try {
             const response = await axios.post('http://localhost:8085/api/contacto', {
@@ -18,8 +23,16 @@ export default function FormContact() {
                 phone,
                 msg
             });
-            console.log("Formulario enviado correctamente.", response.data);
+            setStatus('success');
+            setStatusMessage('¡Mensaje enviado correctamente! Nos pondremos en contacto pronto.');
+            // Clear form
+            setName('');
+            setEmail('');
+            setPhone('');
+            setMsg('');
         } catch (error) {
+            setStatus('error');
+            setStatusMessage('Ha habido un error al enviar el formulario. Por favor, inténtalo de nuevo.');
             console.error("Ha habido un error al enviar el formulario.", error);
         }
     };
@@ -59,7 +72,14 @@ export default function FormContact() {
                                 placeholder="Escribre un comentario"
                                 className="w-full border-2 border-[var(--rosa)] p-2 rounded-lg">
                             </textarea>
-                            <button type="submit" value="send" className="flex justify-center items-center w-[100px] bg-[var(--lila)] text-lg text-[var(--beige)] px-6 lg:px-4 py-2 rounded-lg border-2 border-[var(--lila)] hover:text-[var(--lila)] hover:bg-[var(--beige)] cursor-pointer transition duration-300">Enviar</button>
+                            <button disabled={status === 'loading'} type="submit" value="send" className={`${status === 'loading' ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} flex justify-center items-center w-[100px] bg-[var(--lila)] text-lg text-[var(--beige)] px-6 lg:px-4 py-2 rounded-lg border-2 border-[var(--lila)] hover:text-[var(--lila)] hover:bg-[var(--beige)] transition duration-300`}>
+                                {status === 'loading' ? 'Enviando...' : 'Enviar'}
+                            </button>
+                            {statusMessage && (
+                                <div className={`text-center p-2 rounded-lg ${status === 'success' ? 'bg-green-100 text-green-700' : status === 'error' ? 'bg-red-100 text-red-700' : 'text-[var(--lila)]'}`}>
+                                    {statusMessage}
+                                </div>
+                            )}
                         </form>
                     </div>
                 </div>

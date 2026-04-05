@@ -18,9 +18,9 @@ class ContactController extends Controller
 
         try {
             Mail::raw("Nombre: {$validated['name']}\nEmail: {$validated['email']}\nTeléfono: {$validated['phone']}\nMensaje: {$validated['msg']}", function ($message) use ($validated) {
-                $message->to('nuria.almendros03@gmail.com')
+                $message->to(env('MAIL_FROM_ADDRESS'))
                         ->subject('Nuevo mensaje de contacto')
-                        ->from($validated['email'], $validated['name']);
+                        ->replyTo($validated['email'], $validated['name']);
             });
             return response()->json(['message' => 'Datos enviados correctamente.'], 200);
         } catch (\Exception $e) {
