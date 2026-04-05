@@ -12,7 +12,7 @@ export default function FormContact() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://https://system-delta-lyart.vercel.app/api/contacto', {
+            const response = await axios.post('https://system-delta-lyart.vercel.app/api/contacto', {
                 name,
                 email,
                 phone,
