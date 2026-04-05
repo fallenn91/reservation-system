@@ -20,12 +20,4 @@ npm install
 npm run dev
 ```
 
-## Create models, migration and Controller
-
-```bash
-php artisan make:model Reservation -m
-php artisan make:controller ReservationController --api
-```
-## Create Components for React
-
 

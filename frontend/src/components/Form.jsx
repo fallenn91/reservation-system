@@ -1,5 +1,6 @@
 import { FaWhatsapp, FaRegEnvelope  } from "react-icons/fa";
 import React, { useState } from 'react';
+import axios from "axios";
 
 export default function FormContact() {
     const [name, setName] = useState('');
@@ -58,7 +59,7 @@ export default function FormContact() {
                                 placeholder="Escribre un comentario"
                                 className="w-full border-2 border-[var(--rosa)] p-2 rounded-lg">
                             </textarea>
-                            <a href="" className="flex justify-center items-center w-[100px] bg-[var(--lila)] text-lg text-[var(--beige)] px-6 lg:px-4 py-2 rounded-lg border-2 border-[var(--lila)] hover:text-[var(--lila)] hover:bg-[var(--beige)] cursor-pointer transition duration-300">Enviar</a>
+                            <button type="submit" value="send" className="flex justify-center items-center w-[100px] bg-[var(--lila)] text-lg text-[var(--beige)] px-6 lg:px-4 py-2 rounded-lg border-2 border-[var(--lila)] hover:text-[var(--lila)] hover:bg-[var(--beige)] cursor-pointer transition duration-300">Enviar</button>
                         </form>
                     </div>
                 </div>

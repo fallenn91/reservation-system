@@ -14,9 +14,16 @@ class ContactController extends Controller
             'phone' => 'required|string',
             'msg' => 'nullable|string'
         ]);
+
+        $nombre = $request->input('name');
+        $email = $request->input('email');
+        $numTel = $request->input('phone');
+        $mensaje = $request->input('msg');
+
+        Mail::to('fa11enn9119@gmail.com')->send(new SentForm($nombre, $email, $numTel, $mensaje));
+        
         return response()->json([
-            'success' => true,
-            'message' => 'Enviado correctamente',
+            'message' => 'Datos enviados correctamente.', 200
         ]);
     }
 }
