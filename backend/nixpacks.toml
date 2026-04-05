@@ -4,6 +4,7 @@ nixPkgs = ["php82", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "php82Ex
 [phases.build]
 cmds = [
   "composer install --no-dev --optimize-autoloader",
+  "chmod -R 775 storage bootstrap/cache",
   "php artisan config:cache",
   "php artisan route:cache"
 ]
