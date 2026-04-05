@@ -13,7 +13,7 @@ php artisan key:generate
 php artisan migrate
 ```
 
-## Configure React and Vite
+## Configure React and Vites
 
 ```bash
 npm install
