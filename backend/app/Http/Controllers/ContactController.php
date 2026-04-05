@@ -25,10 +25,10 @@ class ContactController extends Controller
             return response()->json(['message' => 'Datos enviados correctamente.'], 200);
         } catch (\Exception $e) {
             \Log::error('Error al enviar el correo: '.$e->getMessage());
-    return response()->json([
-        'message' => 'Error al enviar el correo',
-        'error' => $e->getMessage()  // 👈 añade esta línea
-    ], 500);
+            return response()->json([
+                'message' => 'Error al enviar el correo',
+                'error' => $e->getMessage()
+            ], 500);
         }        
     }
 }
