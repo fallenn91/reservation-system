@@ -17,5 +17,5 @@ RUN composer install --no-interaction --optimize-autoloader
 # Exponer puerto de Laravel
 EXPOSE 8080
 
-# Levantar Laravel en modo desarrollo
-CMD php artisan serve --host=0.0.0.0 --port=$PORT
+# Levantar Laravel en modo desarrollo (o usando el PHP built-in que acepta $PORT seguro en Railway)
+CMD php -S 0.0.0.0:$PORT -t public
