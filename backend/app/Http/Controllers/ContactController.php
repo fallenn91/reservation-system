@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -15,15 +16,16 @@ class ContactController extends Controller
             'msg' => 'nullable|string'
         ]);
 
-        $nombre = $request->input('name');
-        $email = $request->input('email');
-        $numTel = $request->input('phone');
-        $mensaje = $request->input('msg');
-
-        Mail::to('fa11enn9119@gmail.com')->send(new SentForm($nombre, $email, $numTel, $mensaje));
-        
-        return response()->json([
-            'message' => 'Datos enviados correctamente.', 200
-        ]);
+        try {
+            Mail::raw("Nombre: {$validated['name']}\nEmail: {$validated['email']}\nTeléfono: {$validated['phone']}\nMensaje: {$validated['msg']}", function ($message) use ($validated) {
+                $message->to('nuria.almendros03@gmail.com')
+                        ->subject('Nuevo mensaje de contacto')
+                        ->from($validated['email'], $validated['name']);
+            });
+            return response()->json(['message' => 'Datos enviados correctamente.'], 200);
+        } catch (\Exception $e) {
+            \Log::error('Error al enviar el correo: '.$e->getMessage());
+            return response()->json(['message' => 'Error al enviar el correo'], 500);
+        }        
     }
 }
