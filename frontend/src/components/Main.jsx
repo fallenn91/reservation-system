@@ -39,7 +39,7 @@ export default function Main() {
                 <h2 id="essential "className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)]'>PLAN ESSENTIAL</h2>
                 <div className='w-full flex flex-col lg:flex-row justify-center mt-5 gap-6'>
                     <div className='w-full lg:w-[60%] flex flex-col justify-center gap-6'>
-                        <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
+                        <div className='w-full flex flex-col justify-center bg-gray-100 border border-gray-300 rounded-lg shadow-lg p-9'>
                             <ul className='space-y-5'>
                                 <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><GiForkKnifeSpoon className="plan-icon" />Plan nutricional personalizado</h3>
                                 <p className="text-base md:text-lg">Recibirás una dieta diseñada específicamente para ti, tomando en cuenta tus metas, preferencias alimenticias y necesidades nutricionales.</p>
@@ -52,7 +52,7 @@ export default function Main() {
                         {/* PLAN PREMIUM */}
                         <h2 id="premium" className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3'>PLAN PREMIUM</h2>
 
-                        <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
+                        <div className='w-full flex flex-col justify-center bg-gray-100 border border-gray-300 rounded-lg shadow-lg p-9'>
                             <ul className='space-y-2'>
                                 <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><IoIosChatbubbles className="plan-icon"/>Chat Prioritario (Whatsapp)</h3>
                                 <p className="text-base md:text-lg">Tendrás acceso directo a través de un chat exclusivo donde podrás hacer preguntas y recibir soporte inmediato para resolver cualquier duda que tengas en tu camino de entrenamiento y nutrición.</p>
@@ -66,7 +66,7 @@ export default function Main() {
 
                         <h2 id="choque" className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3'>PLAN CHOQUE</h2>
 
-                        <div className='w-full flex flex-col justify-center border border-gray-300 rounded-lg shadow-lg p-9'>
+                        <div className='w-full flex flex-col justify-center bg-gray-100 border border-gray-300 rounded-lg shadow-lg p-9'>
                             <ul className='space-y-2'>
                                 <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><MdOutlinePayments className="plan-icon"/>Pago único</h3>
                                 <p className="text-base md:text-lg">Este plan requiere un pago único, lo que te asegura acceso completo a todo el seguimiento intensivo durante 3 meses. No habrá cargos adicionales durante ese tiempo.</p>
