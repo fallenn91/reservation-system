@@ -9,6 +9,8 @@ services:
       - /var/www/vendor 
     ports:
       - "8085:8000"
+    environment:
+      - PORT=8000
     command: php -S 0.0.0.0:$PORT -t public
     depends_on:
       - db
