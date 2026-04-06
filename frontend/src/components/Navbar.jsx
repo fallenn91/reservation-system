@@ -25,7 +25,7 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 px-4 md:px-12 py-5 flex flex-wrap justify-between items-center transition-all duration-300 ${scrolled ? "bg-[var(--beige)] shadow-md" : "bg-[var(--beige)]"}`}>
-            <a href="#home" className='font-semibold'><img src='/assets/logo-trans2.png' className='w-16'></img></a>
+            <a href="/#home" className='font-semibold'><img src='/assets/logo-trans2.png' className='w-16'></img></a>
 
             {/* Botón de Menú Hamburguesa (visible en móvil y tablet con lg:hidden) */}
             <button 
@@ -44,9 +44,9 @@ const Navbar = () => {
             {/* Enlaces de navegación */}
             <div className={`w-full absolute top-full left-0 lg:static lg:w-auto lg:flex lg:items-center ${isOpen ? 'flex flex-col shadow-md' : 'hidden'} lg:shadow-none transition-all duration-300 ease-in-out`}>
                 <div className='flex flex-col lg:flex-row w-full bg-[var(--beige)] lg:w-auto justify-center gap-4 lg:gap-10 font-semibold items-center py-4 lg:py-0'>
-                    <a className="nav-btn text-base w-full lg:w-auto text-center hover:text-[var(--lila)] transition-colors" href="#sobre" onClick={() => setIsOpen(false)}>SOBRE MÍ</a>
-                    <a className="nav-btn text-base w-full lg:w-auto text-center hover:text-[var(--lila)] transition-colors" href="#contact" onClick={() => setIsOpen(false)}>CONTACTO</a>
-                    <a href='#planes' className='w-full lg:w-auto flex justify-center mt-2 lg:mt-0' onClick={() => setIsOpen(false)}>
+                    <a className="nav-btn text-base w-full lg:w-auto text-center hover:text-[var(--lila)] transition-colors" href="/#sobre" onClick={() => setIsOpen(false)}>SOBRE MÍ</a>
+                    <a className="nav-btn text-base w-full lg:w-auto text-center hover:text-[var(--lila)] transition-colors" href="/#contacto" onClick={() => setIsOpen(false)}>CONTACTO</a>
+                    <a href='/#planes' className='w-full lg:w-auto flex justify-center mt-2 lg:mt-0' onClick={() => setIsOpen(false)}>
                         <MyButton title="PLANES"></MyButton>
                     </a>
                 </div>
