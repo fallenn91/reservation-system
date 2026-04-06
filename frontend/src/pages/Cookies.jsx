@@ -3,7 +3,7 @@ export default function Cookies() {
         <div className="w-full h-full">
             <div className="flex flex-col w-full h-full my-24 p-4 md:p-12 justify-center items-center text-justify">
                 <h1 className="font-bold mb-4 text-2xl font-bold mb-4  md:text-3xl">Política de Cookies</h1>
-                <div className="w-full md:w-[80%] h-full glassmorph p-12">
+                <div className="glassmorphForm w-full md:w-[80%] h-full p-12">
                     <p>
                         Política de Cookies
 
