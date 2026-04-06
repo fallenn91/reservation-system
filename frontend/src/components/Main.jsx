@@ -169,6 +169,7 @@ export default function Main() {
                     <img src="/assets/logo-completo.png" alt="logo TDF" className="w-full h-auto object-cover rounded-lg shadow-md" />
                 </div>
             </div>
+            
         </div>      
     );
 };
