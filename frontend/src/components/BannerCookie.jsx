@@ -18,10 +18,10 @@ export default function CookieBanner() {
     if (!showBanner) return null;
 
     return (
-        <div className='fixed bottom-0 w-[350px] bg-[var(--rosa)] rounded-lg shadow-lg z-99 m-4 md:mx-12'>
+        <div className='fixed bottom-0 w-[350px] bg-[var(--gold)] rounded-lg shadow-lg z-99 m-4 md:mx-12'>
             <div className='flex flex-col w-full h-full p-4 gap-3'>
-                <p className='text-base text-left text-[var(--negro)]'>Este sitio web utiliza cookies para mejorar tu experiencia. Si sigues navegando, aceptas su uso. <a href="/politica-de-cookies" target="_blank" rel="noopener noreferrer">Más información</a>.</p>
-                <button onClick={acceptCookies} className='w-[100px] bg-[var(--lila)] text-[var(--beige)] text-base rounded-lg cursor-pointer px-2 py-3 hover:bg-[#b037b0] transition-all duration-300'>Aceptar</button>
+                <p className='text-base text-left text-[var(--black)]'>Este sitio web utiliza cookies para mejorar tu experiencia. Si sigues navegando, aceptas su uso. <a href="/politica-de-cookies" target="_blank" rel="noopener noreferrer">Más información</a>.</p>
+                <button onClick={acceptCookies} className='w-[100px] bg-[var(--white)] text-[var(--black)] border border-[var(--gold)] text-base rounded-lg cursor-pointer px-2 py-3 hover:bg-[var(--gold)] hover:text-[var(--white)] transition-all duration-300'>Aceptar</button>
             </div>
         </div>
     );

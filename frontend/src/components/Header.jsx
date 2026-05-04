@@ -1,7 +1,7 @@
 import MyButton from './MyButton';
 export default function Header() {
     return (
-        <header id="home" className="w-full h-screen bg-[var(--beige)] flex justify-center items-center px-4 my-9 md:px-12">
+        <header id="home" className="w-full h-screen bg-[var(--gray-bg)] flex justify-center items-center px-4 my-9 md:px-12">
             <div className="relative w-full h-[85vh] rounded-lg overflow-hidden flex flex-col justify-center items-center">
                 <img
                     src="/assets/food.jpg"
@@ -9,9 +9,9 @@ export default function Header() {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
 
-                <div className="img-overlay absolute inset-0 bg-black/40"></div>
+                <div className="img-overlay absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/20"></div>
 
-                <h2 className="relative text-center text-3xl md:text-5xl lg:text-6xl font-bold text-[var(--beige)]">
+                <h2 className="relative text-center text-3xl md:text-5xl lg:text-6xl font-bold text-[var(--white)] tracking-tight drop-shadow-[0_25px_25px_rgba(0,0,0,0.55)]">
                     Sin excusas<br />
                     Sin Atajos<br /> 
                     Solo constancia, trabajo y <br />

@@ -4,10 +4,15 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [tailwindcss()],
   colors: {
-    beige: "#F1E9E9",
-    lila: "#982598",
-    rosa: "#E491C9",
-    negro: "#15173D",
+    gold: "#D4A017",
+    "gold-light": "#F2C94C",
+    "gold-dark": "#9C6B00",
+    "silver-light": "#E5E5E5",
+    "gray-medium": "#A6A6A6",
+    "gray-dark": "#4F4F4F",
+    black: "#000000",
+    "gray-bg": "#2C2C2C",
+    white: "#FFFFFF",
   },
 });
 

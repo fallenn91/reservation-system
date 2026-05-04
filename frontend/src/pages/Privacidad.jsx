@@ -2,8 +2,8 @@ export default function Privacidad() {
     return (
         <div className="w-full h-full">
             <div className="flex flex-col items-center w-full h-full my-24 p-4 md:p-12 justify-center text-justify">
-                <h1 className="font-bold mb-4 text-2xl font-bold mb-4 md:text-3xl">Política de Privacidad</h1>
-                <div className="glassmorphForm w-full md:w-[80%] h-full p-12">
+                <h1 className="font-bold mb-4 text-2xl font-bold mb-4 md:text-3xl text-[var(--gold)]">Política de Privacidad</h1>
+                <div className="glassmorphForm w-full md:w-[80%] h-full p-12 text-[var(--white)] rounded-lg">
                     <p>
                         Soy The DiloFitness, dietista profesional, y me comprometo a respetar la privacidad de los usuarios que visitan mi página web y utilizan mis servicios.
 

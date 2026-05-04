@@ -8,56 +8,59 @@ import MyButton from './MyButton';
 export default function Main() {
     return (
         <div className="w-full flex flex-col items-center justify-center px-4 my-9 md:px-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--lila)]  text-center">Transformando cada área de tu vida</h2>
-            <p className="max-w-7xl mx-auto text-center text-base p-4 md:p-10 md:text-lg">No somos solos entrenamiento, somos el punto de partida hacia tu mejor versión. Te damos la base, la guía y la estrategia para que construyas resultados reales, desarrolles disciplina y adoptes un estilo de vida que perdure en el tiempo.</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[var(--lila)] text-center px-4">Descubre cómo trabajamos contigo</h2>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 w-8 h-8 md:w-10 md:h-10 mt-4 animate-bounce text-[var(--lila)]">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
-            </svg>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--gold)]  text-center">Tu transformación comienza aquí</h2>
+            <p className="max-w-7xl mx-auto text-center text-base p-4 md:p-10 md:text-lg text-[var(--white)]">No somos solos entrenamiento, somos el punto de partida hacia tu mejor versión. Te damos la base, la guía y la estrategia para que construyas resultados reales, desarrolles disciplina y adoptes un estilo de vida que perdure en el tiempo.</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--gold)] text-center px-4">Descubre cómo trabajamos contigo</h2>
             <article className="w-full h-full flex flex-col md:flex-row flex-wrap justify-center gap-6 md:gap-4 mt-8">
                 <Card
                     Icon={FaDumbbell}
                     title="Entrenamiento"
-                    description="Entrenamiento personalizado, adaptado a tus necesidades y objetivos específicos. Nuestro equipo de expertos diseñará un programa de entrenamiento que se ajuste a tu nivel de condición física, preferencias y metas, asegurando que cada sesión sea efectiva y motivadora."
+                    description="Entrenamiento personalizado, adaptado a tus necesidades y objetivos específicos. Nuestro equipo de expertos diseñará un programa de entrenamiento que se ajuste a tu nivel de condición física, preferencias y metas, asegurando que cada sesión sea efectiva y motivadora. Incluye rutinas progresivas, seguimiento semanal y ajustes basados en tu progreso real."
+                    buttonText="Ver rutinas"
+                    buttonHref="#planes"
                 />
                 <Card
                     Icon={FaNutritionix }
                     title="Nutrición"
-                    description="Planes enfocados en crear hábitos sostenibles. No se trata de dietas extremas, sino de aprender a alimentarte correctamente para potenciar tu rendimiento, mantener tu energía y transformar tu cuerpo de manera saludable y duradera."
+                    description="Planes enfocados en crear hábitos sostenibles. No se trata de dietas extremas, sino de aprender a alimentarte correctamente para potenciar tu rendimiento, mantener tu energía y transformar tu cuerpo de manera saludable y duradera. Recibe guías nutricionales, listas de compras y consejos personalizados."
+                    buttonText="Planes nutricionales"
+                    buttonHref="#planes"
                 />
                 <Card
                     Icon={FaBrain }
                     title="Mentalidad"
-                    description="El cambio real empieza en la mente. Trabajamos la constancia, la perseverancia y la disciplina para que mantengas el compromiso, incluso cuando la motivación disminuye, ayudándote a desarrollar hábitos que perduren en el tiempo."
+                    description="El cambio real empieza en la mente. Trabajamos la constancia, la perseverancia y la disciplina para que mantengas el compromiso, incluso cuando la motivación disminuye, ayudándote a desarrollar hábitos que perduren en el tiempo. Incluye coaching mental, motivación diaria y estrategias para superar barreras."
+                    buttonText="Coaching mental"
+                    buttonHref="#planes"
                 />
             </article>
                                                     {/* PLANES */}
 
             <article id="planes" className="w-full flex flex-col gap-5 mt-10">
-                <h1 className='text-4xl md:text-5xl text-center font-bold text-[var(--lila)] p-12'>Planes</h1>
+                <h1 className='text-4xl md:text-5xl text-center font-bold text-[var(--gold)] p-12'>Planes</h1>
                                         {/* PLAN ESSENTIAL */}
                 <div className='w-full flex flex-col lg:flex-row justify-center mt-5 gap-6'>
                     <div className='w-full lg:w-[60%] flex flex-col justify-center gap-6'>
                         <div className='w-full flex flex-col justify-center bg-gray-100 border border-gray-300 rounded-lg shadow-lg p-9'>
-                            <h2 id="essential" className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mb-5'>Plan Essential</h2>
+                            <h2 id="essential" className='text-2xl md:text-3xl text-left font-bold text-[var(--gold)] mb-5'>Plan Essential</h2>
                             <ul className='space-y-5'>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><GiForkKnifeSpoon className="plan-icon" />Plan nutricional personalizado</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><GiForkKnifeSpoon className="plan-icon" />Plan nutricional personalizado</h3>
                                 <p className="text-base md:text-lg">Recibirás una dieta diseñada específicamente para ti, tomando en cuenta tus metas, preferencias alimenticias y necesidades nutricionales.</p>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><GiRunningShoe className="plan-icon" />Rutina de entrenamiento</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><GiRunningShoe className="plan-icon" />Rutina de entrenamiento</h3>
                                 <p className="text-base md:text-lg">Una rutina personalizada adaptada a tu nivel de condición física, que te ayudará a progresar de manera gradual.</p>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><FaCalendarCheck className="plan-icon"/>Revisión mensual</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><FaCalendarCheck className="plan-icon"/>Revisión mensual</h3>
                                 <p className="text-base md:text-lg">Un chequeo mensual de tu progreso para ajustar la dieta y la rutina según sea necesario, asegurando que te mantengas en el camino hacia tus objetivos.</p>
                             </ul>
                         </div>
                         {/* PLAN PREMIUM */}
                         <div className='w-full flex flex-col justify-center bg-gray-100 border border-gray-300 rounded-lg shadow-lg p-9'>
-                            <h2 id="premium" className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mb-5'>Plan Premium</h2>
+                            <h2 id="premium" className='text-2xl md:text-3xl text-left font-bold text-[var(--gold)] mb-5'>Plan Premium</h2>
                             <ul className='space-y-2'>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><IoIosChatbubbles className="plan-icon"/>Chat Prioritario (Whatsapp)</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><IoIosChatbubbles className="plan-icon"/>Chat Prioritario (Whatsapp)</h3>
                                 <p className="text-base md:text-lg">Tendrás acceso directo a través de un chat exclusivo donde podrás hacer preguntas y recibir soporte inmediato para resolver cualquier duda que tengas en tu camino de entrenamiento y nutrición.</p>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><IoMdSettings className="plan-icon"/>Ajustes Semanales</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><IoMdSettings className="plan-icon"/>Ajustes Semanales</h3>
                                 <p className="text-base md:text-lg">Cada semana recibirás una actualización o ajuste en tu plan, ya sea en tu rutina de entrenamiento o en tu dieta, para optimizar tus resultados y mantener el desafío.</p>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><MdPhoneInTalk className="plan-icon"/>Llamada Mensual</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><MdPhoneInTalk className="plan-icon"/>Llamada Mensual</h3>
                                 <p className="text-base md:text-lg">Una llamada mensual con tu entrenador para revisar tu progreso, discutir tus logros y desafíos, y ajustar tu plan según sea necesario.</p>
                             </ul>
                         </div>
@@ -65,13 +68,13 @@ export default function Main() {
 
 
                         <div className='w-full flex flex-col justify-center bg-gray-100 border border-gray-300 rounded-lg shadow-lg p-9'>
-                        <h2 id="choque" className='text-2xl md:text-3xl text-left font-bold text-[var(--lila)] mt-3 mb-5'>Plan Choque</h2>
+                        <h2 id="choque" className='text-2xl md:text-3xl text-left font-bold text-[var(--gold)] mt-3 mb-5'>Plan Choque</h2>
                             <ul className='space-y-2'>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><MdOutlinePayments className="plan-icon"/>Pago único</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><MdOutlinePayments className="plan-icon"/>Pago único</h3>
                                 <p className="text-base md:text-lg">Este plan requiere un pago único, lo que te asegura acceso completo a todo el seguimiento intensivo durante 3 meses. No habrá cargos adicionales durante ese tiempo.</p>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><FaHeartbeat className="plan-icon"/>Seguimiento Intensivo</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><FaHeartbeat className="plan-icon"/>Seguimiento Intensivo</h3>
                                 <p className="text-base md:text-lg">Tendrás un acompañamiento cercano con actualizaciones diarias o semanales según tus necesidades, para asegurarte de que estés siempre en el camino correcto.</p>
-                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--lila)]'><IoMdTrendingUp className="plan-icon"/>Resultados en 3 meses</h3>
+                                <h3 className='flex items-center gap-2 text-xl md:text-2xl text-left font-bold text-[var(--gold)]'><IoMdTrendingUp className="plan-icon"/>Resultados en 3 meses</h3>
                                 <p className="text-base md:text-lg">Este plan está diseñado para garantizar resultados visibles en un corto periodo, con el objetivo de lograr una transformación notable en tan solo tres meses.</p>
                             </ul>
                         </div>
@@ -80,63 +83,62 @@ export default function Main() {
                         <div className="relative sticky top-[25vh] w-full h-[450px] rounded-lg overflow-hidden">
                             <img src='/assets/foto1.jpg' className='w-full h-full object-cover' alt="Imagen" />
                             <div className='absolute inset-0 bg-black/40'></div>
-                            <MyButton title="Más información" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !text-sm md:!text-lg lg:!text-xl z-10"/>
                         </div>
                     </div>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[var(--lila)] text-center px-4 mt-20">Comparar características</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[var(--gold)] text-center px-4 mt-20">Comparar características</h2>
                 <div className="w-full flex justify-center py-12">
                     <div className="w-full max-w-7xl flex flex-col lg:flex-row items-stretch justify-center gap-8 px-4">
 
                         {/* PLAN CHOQUE - DESTACADO PRIMERO */}
                         <div className="glassmorph-choque rounded-2xl p-8 flex-1 flex flex-col transition-all duration-500 hover:scale-[1.03] relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 bg-[var(--lila)] text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-lg uppercase tracking-wider animate-pulse">
+                            <div className="absolute top-0 right-0 bg-[var(--gold)] text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-lg uppercase tracking-wider animate-pulse">
                                 Más Popular
                             </div>
-                            <h2 className="text-3xl font-black text-[var(--lila)] mb-2 text-center uppercase tracking-tighter">Plan Choque</h2>
-                            <p className="text-[var(--negro)] text-sm text-center mb-6 opacity-70">Transformación intensiva en 3 meses</p>
-                            <div className="h-[2px] bg-gradient-to-r from-transparent via-[var(--lila)] to-transparent mb-6 opacity-30"></div>
+                            <h2 className="text-3xl font-black text-[var(--gold)] mb-2 text-center uppercase tracking-tighter">Plan Choque</h2>
+                            <p className="text-[var(--gray-medium)] text-sm text-center mb-6 opacity-70">Transformación intensiva en 3 meses</p>
+                            <div className="h-[2px] bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent mb-6 opacity-30"></div>
                             <ul className="space-y-4 flex-1">
-                                <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-600 font-bold">✓</span> <span className="text-base font-medium">Plan nutricional personalizado</span></li>
+                                <li className="flex items-center gap-3"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-600 font-bold">✓</span> <span className="text-base font-medium">Plan nutricional personalizado</span></li>
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-600 font-bold">✓</span> <span className="text-base font-medium">Rutina de entrenamiento</span></li>
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-600 font-bold">✓</span> <span className="text-base font-medium">Revisión mensual</span></li>
-                                <li className="flex items-center gap-3 text-[var(--negro)] opacity-40"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-400/20 flex items-center justify-center text-gray-500">✘</span> <span className="text-base">Chat Prioritario (Whatsapp)</span></li>
-                                <li className="flex items-center gap-3 text-[var(--negro)] opacity-40"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-400/20 flex items-center justify-center text-gray-500">✘</span> <span className="text-base">Ajustes Semanales</span></li>
-                                <li className="flex items-center gap-3 text-[var(--negro)] opacity-40"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-400/20 flex items-center justify-center text-gray-500">✘</span> <span className="text-base">Llamada Mensual</span></li>
-                                <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-[var(--lila)] flex items-center justify-center text-white font-bold text-xs ring-4 ring-[var(--lila)]/20">★</span> <span className="text-base font-bold text-[var(--lila)]">Pago único garantizado</span></li>
+                                <li className="flex items-center gap-3 opacity-40"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-400/20 flex items-center justify-center text-[var(--gray-medium)]">✘</span> <span className="text-base">Chat Prioritario (Whatsapp)</span></li>
+                                <li className="flex items-center gap-3 opacity-40"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-400/20 flex items-center justify-center text-[var(--gray-medium)]">✘</span> <span className="text-base">Ajustes Semanales</span></li>
+                                <li className="flex items-center gap-3 opacity-40"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-400/20 flex items-center justify-center text-[var(--gray-medium)]">✘</span> <span className="text-base">Llamada Mensual</span></li>
+                                <li className="flex items-center gap-3"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-[var(--gold)] flex items-center justify-center text-white font-bold text-xs ring-4 ring-[var(--gold)]/20">★</span> <span className="text-base font-bold text-[var(--gold)]">Pago único garantizado</span></li>
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-600 font-bold">✓</span> <span className="text-base font-medium">Seguimiento Intensivo</span></li>
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-600 font-bold">✓</span> <span className="text-base font-medium">Resultados en 3 meses</span></li>
                             </ul>
                             <div className="mt-8">
                                 <a href="/#contacto">
-                                    <button className="w-full bg-[var(--lila)] text-white py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-[var(--lila)]/20 transition-all duration-300 transform active:scale-95 cursor-pointer">RESERVAR AHORA</button>
+                                    <button className="w-full bg-[var(--gold)] text-white py-6 px-8 rounded-xl font-bold text-xl uppercase tracking-wide hover:shadow-xl hover:shadow-[var(--gold)]/20 transition-all duration-300 transform active:scale-95 cursor-pointer">RESERVAR AHORA</button>
                                 </a>
                             </div>
                         </div>
 
                         {/* PLAN ESSENTIAL */}
                         <div className="glassmorph rounded-2xl p-8 flex-1 flex flex-col transition-all duration-500 hover:scale-[1.01] hover:bg-white/50 border border-white/40">
-                            <h2 className="text-2xl font-bold text-[var(--negro)] mb-1 text-center">PLAN ESSENTIAL</h2>
-                            <p className="text-[var(--negro)] text-sm text-center mb-6 opacity-60">La base para empezar tu cambio</p>
+                            <h2 className="text-2xl font-bold text-[var(--gold)] mb-1 text-center">PLAN ESSENTIAL</h2>
+                            <p className="text-[var(--gray-medium)] text-sm text-center mb-6 opacity-60">La base para empezar tu cambio</p>
                             <div className="h-[1px] bg-gray-300 w-full mb-6"></div>
                             <ul className="space-y-4 flex-1">
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center text-green-600 text-xs font-bold">✓</span> <span className="text-sm">Plan nutricional personalizado</span></li>
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center text-green-600 text-xs font-bold">✓</span> <span className="text-sm">Rutina de entrenamiento</span></li>
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center text-green-600 text-xs font-bold">✓</span> <span className="text-sm">Revisión mensual</span></li>
-                                <li className="flex items-center gap-3 text-[var(--negro)] opacity-30"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-gray-400/10 flex items-center justify-center text-gray-500 text-xs">✘</span> <span className="text-sm text-gray-500">Chat Prioritario (Whatsapp)</span></li>
-                                <li className="flex items-center gap-3 text-[var(--negro)] opacity-30"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-gray-400/10 flex items-center justify-center text-gray-500 text-xs">✘</span> <span className="text-sm text-gray-500">Ajustes Semanales</span></li>
-                                <li className="flex items-center gap-3 text-[var(--negro)] opacity-30"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-gray-400/10 flex items-center justify-center text-gray-500 text-xs">✘</span> <span className="text-sm text-gray-500">Llamada Mensual</span></li>
+                                <li className="flex items-center gap-3 opacity-30"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-gray-400/10 flex items-center justify-center text-[var(--gray-medium)] text-xs">✘</span> <span className="text-sm text-[var(--gray-medium)]">Chat Prioritario (Whatsapp)</span></li>
+                                <li className="flex items-center gap-3 opacity-30"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-gray-400/10 flex items-center justify-center text-[var(--gray-medium)] text-xs">✘</span> <span className="text-sm text-[var(--gray-medium)]">Ajustes Semanales</span></li>
+                                <li className="flex items-center gap-3 opacity-30"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-gray-400/10 flex items-center justify-center text-[var(--gray-medium)] text-xs">✘</span> <span className="text-sm text-[var(--gray-medium)]">Llamada Mensual</span></li>
                             </ul>
                             <div className="mt-8">
-                                <a href="/#contacto" className="w-full border-2 border-[var(--lila)] text-[var(--lila)] py-3 rounded-xl font-bold text-center block hover:bg-[var(--lila)] hover:text-white transition-all duration-300">Empezar ahora</a>
+                                <a href="/#contacto" className="w-full border-2 border-[var(--gold)] text-[var(--gold)] py-3 rounded-xl font-bold text-center block hover:bg-[var(--gold)] hover:text-white transition-all duration-300">Empezar ahora</a>
                             </div>
                         </div>
 
                         {/* PLAN PREMIUM */}
                         <div className="glassmorph-premium rounded-2xl p-8 flex-1 flex flex-col transition-all duration-500 hover:scale-[1.01] hover:bg-white/30">
-                            <h2 className="text-2xl font-bold text-[var(--lila)] mb-1 text-center">PLAN PREMIUM</h2>
+                            <h2 className="text-2xl font-bold text-[var(--gold)] mb-1 text-center">PLAN PREMIUM</h2>
                             <p className="text-[var(--negro)] text-sm text-center mb-6 opacity-60">Acompañamiento VIP diario</p>
-                            <div className="h-[1px] bg-[var(--lila)]/20 w-full mb-6"></div>
+                            <div className="h-[1px] bg-[var(--gold)]/20 w-full mb-6"></div>
                             <ul className="space-y-4 flex-1">
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center text-green-600 text-xs font-bold">✓</span> <span className="text-sm">Plan nutricional personalizado</span></li>
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center text-green-600 text-xs font-bold">✓</span> <span className="text-sm">Rutina de entrenamiento</span></li>
@@ -146,27 +148,27 @@ export default function Main() {
                                 <li className="flex items-center gap-3 text-[var(--negro)]"><span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center text-green-600 text-xs font-bold">✓</span> <span className="text-sm font-semibold">Llamada Mensual</span></li>
                             </ul>
                             <div className="mt-8">
-                                <a href="/#contacto" className="w-full bg-white text-[var(--lila)] border border-[var(--lila)]/30 py-3 rounded-xl font-bold text-center block hover:bg-[var(--lila)] hover:text-white transition-all duration-300 shadow-sm">Hablar con The DiloFitness</a>
+                                <a href="/#contacto" className="w-full bg-white text-[var(--gold)] border border-[var(--gold)]/30 py-3 rounded-xl font-bold text-center block hover:bg-[var(--gold)] hover:text-white transition-all duration-300 shadow-sm">Hablar con The DiloFitness</a>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </article>
-            <h2 id="sobre" className="text-4xl md:text-5xl text-center font-bold text-[var(--lila)] p-12">Historia</h2>
+            <h2 id="sobre" className="text-4xl md:text-5xl text-center font-bold text-[var(--gold)] p-12">Quién soy</h2>
             <div className="relative w-full min-h-[50vh] md:min-h-[70vh] flex flex-col-reverse lg:flex-row justify-center items-center py-10 rounded-lg overflow-hidden md:py-20 bg-[url('/assets/foto4.jpg')] bg-cover bg-center bg-fixed gap-8 lg:gap-10 px-4">
             <div className="absolute inset-0 bg-black/40"></div>
                 {/* Contenedor del texto */}
-                <div className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] p-6 md:p-8 bg-white/80 rounded-xl shadow-xl flex flex-col justify-center z-10">
+                <div className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] p-6 md:p-8 bg-white/95 rounded-xl shadow-xl flex flex-col justify-center z-10">
                     <h3 className="text-2xl md:text-3xl font-bold text-[var(--lila)] mb-4 text-center lg:text-left">The DiloFitness</h3>
-                    <p className="text-base md:text-xl leading-relaxed text-gray-800 text-justify">
+                    <p className="text-base md:text-xl leading-relaxed text-justify">
                         Mi camino en el mundo del bienestar no empezó en un aula, sino a los 5 años, cuando mi diagnóstico de diabetes tipo 1 me obligó a entender la nutrición y el deporte como los pilares fundamentales de mi salud. Lo que empezó como una necesidad personal, se convirtió rápidamente en mi mayor pasión. Hoy con 23 años y una formación sólida como dietista y entrenadora personal titulada, mi misión es clara: Ayudarte a alcanzar tu mejor versión sin mitos ni restricciones extremas. Sé lo que significa tener que cuidar cada detalle, por eso mi enfoque es humano, realista y basado en la ciencia.
                     </p>
                 </div>
 
                 {/* Contenedor del logo */}
                 <div className="w-[180px] md:w-[220px] lg:w-[250px] flex-shrink-0 bg-white/50 p-2 rounded-xl z-10">
-                    <img src="/assets/logo-completo.png" alt="logo TDF" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                    <img src="/assets/logo-theDiloFitness.png" alt="logo TDF" className="w-full h-auto object-cover rounded-lg shadow-md" />
                 </div>
             </div>
             
