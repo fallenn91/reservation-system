@@ -9,6 +9,7 @@ import CookieBanner from './components/BannerCookie';
 import PoliticaPrivacidad from './pages/Privacidad';
 import PoliticaCookies from './pages/Cookies';
 import AvisoLegal from './pages/AvisoLegal';
+import GoUpArrow from './components/GoUpArrow';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 
@@ -24,6 +25,7 @@ root.render(
             <Header />
             <Main />
             <FormContact />
+            <GoUpArrow />
           </>
         } />
         <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />

@@ -1,4 +1,6 @@
-import { FaWhatsapp, FaRegEnvelope  } from "react-icons/fa";
+import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { FaWhatsapp } from "react-icons/fa";
+
 import React, { useState } from 'react';
 import axios from "axios";
 
@@ -49,12 +51,12 @@ export default function FormContact() {
     };
 
     return (
-        <div className="relative w-full h-full flex flex-col justify-center items-center p-4 md:p-12">
+        <div id="form" className="relative w-full h-full flex flex-col justify-center items-center p-4 md:p-12 ">
             <div className="glassmorphForm relative flex flex-col lg:flex-row w-full h-full">
-                <div className="relative w-full lg:w-[60%] flex flex-col justify-center items-center p-[20px] md:p-[40px] lg:p-[50px]">
+                <div className="relative w-full lg:w-[60%] flex flex-col justify-center items-center p-4 md:p-6 lg:p-8">
                     <div className="relative w-full bg-[var(--white)] rounded-lg p-3">
-                        <h1 id="contacto" className="text-2xl md:text-4xl lg:text-5xl text-center font-bold text-[var(--gold)] p-3">¿Te gustaría mejorar tu salud?</h1>
-                        <form onSubmit={handleSubmit} method="POST" className="relative w-full flex flex-col text-sm md:text-lg p-4 gap-5">
+                        <h3 id="contacto" className="text-2xl md:text-3xl lg:text-4xl text-center font-bold text-[var(--gold)] p-3">¿Te gustaría mejorar tu salud?</h3>
+                        <form onSubmit={handleSubmit} method="POST" className="relative w-full flex flex-col text-sm md:text-lg p-4 gap-3">
 
                             {/* Honeypot — oculto para humanos, los bots lo rellenan */}
                             <input
@@ -72,31 +74,31 @@ export default function FormContact() {
                                 type="text"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                placeholder="Nombre"
-                                className="w-full border-2 border-[var(--rosa)] p-2 rounded-lg"
+                                placeholder="Tu nombre"
+                                className="w-full border border-[var(--rosa)] px-3 py-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
                             />
                             <label htmlFor="email">Email</label>
                             <input
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="ejemplo@gmail.com"
-                                className="w-full border-2 border-[var(--rosa)] p-2 rounded-lg"
+                                placeholder="tuemail@ejemplo.com"
+                                className="w-full border border-[var(--rosa)] px-3 py-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
                             />
                             <label htmlFor="phone">Teléfono</label>
                             <input
                                 type="tel"
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
-                                placeholder="+34 000 000 000"
-                                className="w-full border-2 border-[var(--rosa)] p-2 rounded-lg"
+                                placeholder="+34 600 000 000"
+                                className="w-full border border-[var(--rosa)] px-3 py-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
                             />
                             <label htmlFor="msg">Mensaje</label>
                             <textarea
                                 value={msg}
                                 onChange={(e) => setMsg(e.target.value)}
-                                placeholder="Escribe un comentario"
-                                className="w-full border-2 border-[var(--rosa)] p-2 rounded-lg"
+                                placeholder="Cuéntame tu objetivo o en qué necesitas ayuda"
+                                className="w-full border border-[var(--rosa)] px-3 py-2 text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
                             />
                             <label className="flex items-center gap-2 text-sm text-[var(--gold)] text-left">
                                 <input
@@ -125,14 +127,14 @@ export default function FormContact() {
                 </div>
                 <div className="relative w-full lg:w-[40%] flex flex-col lg:flex-row justify-center items-center p-3">
                     <div className="relative w-full rounded-lg p-3">
-                        <h1 className="text-2xl md:text-4xl lg:text-5xl text-center font-bold text-[var(--gold)] p-4">Contáctame</h1>
+                        <h3 className="text-2xl md:text-4xl lg:text-5xl text-center font-bold text-[var(--gold)] p-4">Contáctame</h3>
                         <p className="text-center text-[var(--white)] text-lg mb-4">Sin compromisos, respondo en menos de 24h</p>
                         <div className="flex justify-center items-center w-full h-full gap-5">
                             <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer">
-                                <FaWhatsapp className="w-[50px] md:w-[80px] h-auto text-[var(--gold)] hover:text-[var(--black)] transition duration-300"/>
+                                <FaWhatsapp  className="w-[50px] md:w-[80px] h-auto text-[var(--gold)] hover:text-[var(--black)] transition duration-300"/>
                             </a>
                             <a href="mailto:thedilofitness@gmail.com">
-                                <FaRegEnvelope className="w-[50px] md:w-[80px] h-auto text-[var(--gold)] hover:text-[var(--black)] transition duration-300" />
+                                <EnvelopeIcon className="w-[50px] md:w-[80px] h-auto text-[var(--gold)] hover:text-[var(--black)] transition duration-300" />
                             </a>
                         </div>
                     </div>

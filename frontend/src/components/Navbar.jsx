@@ -24,7 +24,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`fixed top-0 left-0 w-full z-50 px-4 md:px-12 py-5 flex flex-wrap justify-between items-center transition-all duration-300 ${scrolled ? "bg-[var(--gray-bg)]" : "bg-[var(--gray-bg)]"}`}>
+        <nav className={`fixed top-0 left-0 w-full z-50 px-4 md:px-12 py-5 flex flex-wrap justify-between items-center transition-all duration-300 ${scrolled ? "bg-[var(--gray-bg)] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.2)]" : "bg-[var(--gray-bg)] shadow-none"}`}>
             <a href="/#home" className='font-semibold'><img src='/assets/logo-tf.png' className='w-16'></img></a>
 
             {/* Botón de Menú Hamburguesa (visible en móvil y tablet con lg:hidden) */}
@@ -46,9 +46,7 @@ const Navbar = () => {
                 <div className='flex flex-col lg:flex-row w-full bg-[var(--gray-bg)] lg:w-auto justify-center gap-4 lg:gap-10 font-semibold items-center py-4 lg:py-0'>
                     <a className="nav-btn text-base w-full lg:w-auto text-center hover:text-[var(--gold-light)] transition-colors" href="/#sobre" onClick={() => setIsOpen(false)}>SOBRE MÍ</a>
                     <a className="nav-btn text-base w-full lg:w-auto text-center hover:text-[var(--gold-light)] transition-colors" href="/#contacto" onClick={() => setIsOpen(false)}>CONTACTO</a>
-                    <a href='/#planes' className='w-full lg:w-auto flex justify-center mt-2 lg:mt-0' onClick={() => setIsOpen(false)}>
-                        <MyButton title="PLANES"></MyButton>
-                    </a>
+                    <MyButton title="PLANES" href="/#planes" onClick={() => setIsOpen(false)} />
                 </div>
             </div>
         </nav>

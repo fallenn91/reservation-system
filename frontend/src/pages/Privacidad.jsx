@@ -5,11 +5,11 @@ export default function Privacidad() {
                 <h1 className="font-bold mb-4 text-2xl font-bold mb-4 md:text-3xl text-[var(--gold)]">Política de Privacidad</h1>
                 <div className="glassmorphForm w-full md:w-[80%] h-full p-12 text-[var(--white)] rounded-lg">
                     <p>
-                        Soy The DiloFitness, dietista profesional, y me comprometo a respetar la privacidad de los usuarios que visitan mi página web y utilizan mis servicios.
+                        Soy TheDiloFitness, dietista profesional, y me comprometo a respetar la privacidad de los usuarios que visitan mi página web y utilizan mis servicios.
 
                         Responsable del tratamiento:<br /><br />
 
-                        El responsable del tratamiento de los datos personales que recoges a través de este sitio web soy yo, <b>The DiloFitness</b>, con DNI <b>B0000000</b>. Mi domicilio para efectos de notificaciones es <b>thedilofitness@gmail.com</b>.
+                        El responsable del tratamiento de los datos personales que recoges a través de este sitio web soy yo, <b>TheDiloFitness</b>, con DNI <b>B0000000</b>. Mi domicilio para efectos de notificaciones es <b>thedilofitness1@gmail.com</b>.
 
                         Finalidad del tratamiento:<br /><br />
 
@@ -17,7 +17,7 @@ export default function Privacidad() {
 
                         Derechos de los usuarios:<br /><br />
 
-                        Tienes derecho a acceder, rectificar, suprimir o limitar el uso de tus datos personales en cualquier momento. Para ejercer estos derechos, puedes contactarme directamente en <b>thedilofitness@gmail.com</b>.
+                        Tienes derecho a acceder, rectificar, suprimir o limitar el uso de tus datos personales en cualquier momento. Para ejercer estos derechos, puedes contactarme directamente en <b>thedilofitness1@gmail.com</b>.
 
                         Consentimiento:<br /><br />
 
@@ -27,7 +27,7 @@ export default function Privacidad() {
 
                         Los datos proporcionados se conservarán solo el tiempo necesario para atender tu consulta o solicitud, y no se compartirán con terceros, salvo en los casos en que sea necesario por obligación legal.
 
-                        Si tienes alguna duda o inquietud sobre el tratamiento de tus datos, no dudes en contactarme en <b>thedilofitness@gmail.com</b>.
+                        Si tienes alguna duda o inquietud sobre el tratamiento de tus datos, no dudes en contactarme en <b>thedilofitness1@gmail.com</b>.
                     </p>
                 </div>
             </div>
