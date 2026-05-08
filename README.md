@@ -1,4 +1,4 @@
-# 💪 The DiloFitness
+# 💪 TheDiloFitness
 
 A fitness website for a personal trainer brand, built as a **decoupled full-stack application**. The React frontend showcases training and nutrition plans, handles contact form submissions, and allows users to make reservations — all backed by a Laravel REST API.
 
@@ -10,7 +10,6 @@ A fitness website for a personal trainer brand, built as a **decoupled full-stac
 - Landing page with hero video, services overview, and trainer bio
 - **Training plans** section with detailed programme cards
 - **Nutrition plans** section
-- **Reservation form** — book a session by name, email, date, time, and number of guests
 - **Contact form** — sends an email directly to the gym via the backend
 - Cookie consent banner
 - Legal pages: Privacy Policy, Cookie Policy, Legal Notice
@@ -21,9 +20,6 @@ A fitness website for a personal trainer brand, built as a **decoupled full-stac
 - Contact form endpoint — validates input and sends an email notification
 - CORS middleware configured for cross-origin requests
 - Deployed on **Railway** with Nixpacks build
-
-### 🗄️ Database
-- `reservations` table: name, email, date, time, guests
 
 ---
 
@@ -38,30 +34,6 @@ A fitness website for a personal trainer brand, built as a **decoupled full-stac
 | Containerisation | Docker & Docker Compose |
 | Frontend deploy | Vercel |
 | Backend deploy | Railway (Nixpacks) |
-
----
-
-## 📡 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/reservations` | List all reservations |
-| `POST` | `/api/reservations` | Create a reservation |
-| `GET` | `/api/reservations/{id}` | Get a reservation |
-| `PUT` | `/api/reservations/{id}` | Update a reservation |
-| `DELETE` | `/api/reservations/{id}` | Delete a reservation |
-| `POST` | `/api/contacto` | Send contact form email |
-
-**Reservation payload:**
-```json
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "date": "2026-06-15",
-  "time": "10:00",
-  "guests": 1
-}
-```
 
 ---
 
@@ -102,14 +74,6 @@ docker exec laravel_backend php artisan migrate
 APP_NAME=Laravel
 APP_URL=http://localhost
 
-# Database — MySQL when using Docker
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=reservas
-DB_USERNAME=user
-DB_PASSWORD=password
-
 # Mail — configure to enable contact form emails
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.example.com
@@ -139,7 +103,6 @@ For production, set `VITE_API_URL` to your deployed backend URL (e.g. Railway).
 │   │   ├── Http/
 │   │   │   ├── Controllers/  # ReservationController, ContactController
 │   │   │   └── Middleware/   # CorsMiddleware
-│   │   ├── Mail/             # SentForm (contact email)
 │   │   └── Models/           # Reservation, User
 │   ├── database/
 │   │   └── migrations/       # reservations table schema
